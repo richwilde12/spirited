@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="112" fill="#1D1713"/>
+<clipPath id="bowl"><polygon points="84.4,102.9 427.6,102.9 256.0,303.5"/></clipPath>
+<g clip-path="url(#bowl)"><rect x="82.4" y="255.8" width="347.2" height="48.2" fill="#C9709A"/><rect x="82.4" y="225.2" width="347.2" height="31.6" fill="#A7765A"/><rect x="82.4" y="198.8" width="347.2" height="27.4" fill="#F0904A"/><rect x="82.4" y="174.9" width="347.2" height="25.0" fill="#CB5A3C"/><rect x="82.4" y="152.5" width="347.2" height="23.3" fill="#E9C64B"/><rect x="82.4" y="131.4" width="347.2" height="22.1" fill="#6CC3A8"/></g>
+<g fill="none" stroke="#F3E9DB" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+<polygon points="84.4,102.9 427.6,102.9 256.0,303.5"/>
+<line x1="256.0" y1="303.5" x2="256.0" y2="422.3"/>
+<line x1="168.9" y1="430.2" x2="343.1" y2="430.2"/>
+</g></svg>

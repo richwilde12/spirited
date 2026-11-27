@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Spirited home-screen wrapper (GitHub Pages). This is index.html for GitHub, NOT the Apps Script Index.html. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spirited</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Spirited">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1D1713">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<style>
+  html, body { margin: 0; height: 100%; background: #1D1713; overflow: hidden; }
+  /* The app can't see the iPhone notch from inside the frame, so the wrapper keeps it clear. */
+  iframe {
+    position: fixed;
+    top: env(safe-area-inset-top, 0px);
+    bottom: env(safe-area-inset-bottom, 0px);
+    left: env(safe-area-inset-left, 0px);
+    right: env(safe-area-inset-right, 0px);
+    width: calc(100% - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    height: calc(100% - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    border: 0; background: #1D1713;
+  }
+  .loading { position: fixed; inset: 0; display: grid; place-items: center; transition: opacity .3s; }
+  .loading img { width: 96px; height: 96px; border-radius: 22px; }
+  .loading.gone { opacity: 0; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) { .loading { transition: none; } }
+</style>
+</head>
+<body>
+<div class="loading" id="loading"><img src="icon-192.png" alt=""></div>
+<iframe id="app" title="Spirited" allow="clipboard-write; web-share"></iframe>
+<script>
+  // Your Apps Script deployment. "Manage deployments > Edit > New version" keeps this address the same.
+  var EXEC_URL = 'https://script.google.com/macros/s/AKfycbyFMrSqxZC032lZFKKgmhAi0ZRGJwMhwadgzI0ZKQLXaiLApCAAd8KtLLavUapezMknCQ/exec';
+  var frame = document.getElementById('app');
+  frame.addEventListener('load', function () { document.getElementById('loading').className = 'loading gone'; });
+  frame.src = EXEC_URL;
+</script>
+</body>
+</html>
